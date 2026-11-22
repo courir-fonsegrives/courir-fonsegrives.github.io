@@ -1,6 +1,7 @@
 ---
 titre: "Le bureau"
 email: courirfonsegrives31@gmail.com
+strava: https://www.strava.com/clubs/courir-fonsegrives
 membres:
   - nom: "Ludivine Querbes"
     photo: "photos/bureau/ludivine-querbes.jpg"
@@ -19,4 +20,3 @@ membres:
     photo: "photos/bureau/fanny-yessad.png"
     role: "Secrétaire"
 ---
-Le club est aussi sur [Strava](https://strava.app.link/qBerZEvmSVb).
