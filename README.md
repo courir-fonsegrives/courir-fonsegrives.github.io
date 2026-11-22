@@ -4,13 +4,30 @@ Site de Courir Fonsegrives, club de course à pied de Quint-Fonsegrives.
 
 En ligne : https://courir-fonsegrives.github.io/
 
+## Le dépôt
+
+```text
+_rubriques/          le texte de chaque rubrique (voir ci-dessous)
+photos/
+├── bureau/          les photos des membres du bureau
+├── membres/         les photos du trombinoscope
+├── apercu-liens.jpg l'image de l'aperçu des liens partagés (1200 × 630 pixels, tirée du logo)
+└── logo.png         le logo carré que les moteurs de recherche affichent
+index.html           la mise en page, les couleurs et le code ; assemble les rubriques dans l'ordre de la page
+_includes/           deux morceaux de code repris par index.html (icônes des réseaux, texte pour le JSON)
+_config.yml          les réglages de Jekyll, qui fabrique le site
+robots.txt           pour les moteurs de recherche, avec sitemap.xml : ne pas les supprimer
+sitemap.xml
+.github/workflows/   la publication du site et les aperçus de PR
+```
+
+Les autres images et le PDF sont chargés depuis [courir-fonsegrives.fr](https://courir-fonsegrives.fr).
+
 ## Modifier un texte
 
-Chaque rubrique du site a son fichier dans [`_rubriques/`](_rubriques) :
-
-| Fichier | Rubrique |
+| Fichier de `_rubriques/` | Rubrique |
 |---|---|
-| `accueil.md` | La grande photo, le titre et le bouton du haut ; le titre d'onglet et la description servent aussi à l'aperçu des liens partagés |
+| `accueil.md` | La grande photo, le titre et le bouton du haut. Le titre d'onglet et la description servent aussi à l'aperçu des liens partagés |
 | `presentation.md` | « Course à pied, plaisir et convivialité… » |
 | `lieux.md` | Les lieux et les quatorze parcours |
 | `semaine.md` | Les trois sorties de la semaine |
@@ -18,51 +35,64 @@ Chaque rubrique du site a son fichier dans [`_rubriques/`](_rubriques) :
 | `adhesion.md` | Les tarifs et comment adhérer |
 | `bureau.md` | Les membres du bureau, leurs photos, l'adresse mail et la page Strava du club |
 | `membres.md` | Le trombinoscope : la liste des membres et leurs photos |
-| `partenaires.md` | Les partenaires du club, leur logo et leur site |
+| `partenaires.md` | Les partenaires du club, leur logo, leur site et leurs réseaux sociaux |
 | `mentions.md` | Les mentions légales : éditeur, directeur de la publication, hébergeur, données personnelles |
 
-Pour modifier un texte sur GitHub :
+Sur GitHub :
 
 1. Ouvrir le fichier, puis cliquer sur le crayon (« Edit this file »).
 2. Changer le texte.
-3. Cliquer sur « Commit changes ».
-4. Le site est à jour environ une minute plus tard.
+3. Cliquer sur « Commit changes ». Le site est à jour environ une minute plus tard.
+
+Pour déposer une photo : bouton « Add file », puis « Upload files ».
 
 Un fichier a deux parties :
 
-- **En haut, entre les deux lignes `---`** : les titres, les listes et les petits textes. Chaque texte est entre guillemets droits (`"…"`). Gardez ces guillemets. Pour citer quelque chose dans un texte, utilisez les guillemets français « ».
+- **En haut, entre les deux lignes `---`** : les titres, les listes et les petits textes. Gardez les guillemets droits (`"…"`) autour de chaque texte. Pour citer, utilisez « ».
 - **En bas, après le second `---`** : les paragraphes, en Markdown. Laissez une ligne vide entre deux paragraphes. Un lien s'écrit `[texte du lien](https://adresse)`.
 
-Changer la photo d'un membre du bureau : déposer la photo dans `photos/bureau/` (bouton « Add file », puis « Upload files »), puis mettre son chemin après `photo:` dans `bureau.md`. Sans ligne `photo:`, le membre s'affiche sans photo.
+## Les changements courants
 
-Changer la page Strava du club : mettre son adresse après `strava:` dans `bureau.md`. Sans ligne `strava:`, la page n'affiche pas le lien Strava.
+**Trombinoscope** (`membres.md`, photos dans `photos/membres/`) :
 
-Ajouter un membre au trombinoscope : copier un bloc qui commence par `- prenom:` dans `membres.md`, le coller à sa place dans l'ordre alphabétique des noms, et changer ses valeurs. Déposer sa photo dans `photos/membres/` (bouton « Add file », puis « Upload files »), puis mettre son chemin après `photo:`. Sans ligne `photo:`, le membre s'affiche avec ses initiales et n'est pas dans le jeu « Qui est-ce ? ».
+- Ajouter un membre : copier un bloc qui commence par `- prenom:`, le coller dans l'ordre alphabétique des noms, puis changer ses valeurs.
+- Retirer un membre : supprimer son bloc, puis sa photo.
+- Corriger un nom : changer `prenom:` ou `nom:` dans son bloc.
+- Ajouter une photo : la déposer, puis mettre son chemin après `photo:`.
+- Changer une photo : déposer la nouvelle sous le même nom que l'ancienne, elle la remplace.
+- La page recadre la photo en carré, centrée un peu au-dessus du milieu. Réduire une photo de téléphone à environ 400 pixels de large avant de la déposer garde la page rapide.
 
-Retirer un membre du trombinoscope : supprimer son bloc dans `membres.md`, puis sa photo dans `photos/membres/`.
+**Bureau** (`bureau.md`, photos dans `photos/bureau/`) : déposer la photo, puis mettre son chemin après `photo:`. L'adresse de la page Strava du club va après `strava:`.
 
-Corriger le nom d'un membre du trombinoscope : changer `prenom:` ou `nom:` dans son bloc de `membres.md`.
+**Partenaires** (`partenaires.md`) : copier un bloc qui commence par `- nom:`, puis changer ses valeurs. `logo_largeur` et `logo_hauteur` sont la taille de l'image en pixels. Sous `reseaux:`, chaque bloc `- nom:` ajoute un lien vers un réseau social. Instagram, Facebook, Telegram et Twitter ont leur icône.
 
-Changer la photo d'un membre du trombinoscope : déposer la nouvelle photo dans `photos/membres/` sous le même nom que l'ancienne, elle la remplace. Sur la page, la photo est recadrée en carré, centrée un peu au-dessus du milieu. Une photo de téléphone est lourde : la réduire à environ 400 pixels de large avant de la déposer garde la page rapide.
+**Parcours** (`lieux.md`) : copier un bloc qui commence par `- km:`, puis changer ses valeurs. Le nombre après `openrunner:` est le numéro du parcours sur OpenRunner. Un lieu cité dans `passe_par` mais absent de la liste `lieux` s'ajoute tout seul à la fin.
 
-Ajouter un partenaire : copier un bloc qui commence par `- nom:` dans `partenaires.md` et changer ses valeurs. `logo_largeur` et `logo_hauteur` sont la taille de l'image en pixels. Sans ligne `site:`, le partenaire s'affiche sans lien. Sous `reseaux:`, chaque bloc `- nom:` ajoute un lien vers un réseau social. Instagram, Facebook, Telegram et Twitter ont leur icône.
+Certaines lignes sont facultatives :
 
-Ajouter un parcours : copier un bloc qui commence par `- km:` dans `lieux.md` et changer ses valeurs. Le nombre après `openrunner:` est le numéro du parcours sur OpenRunner. Un lieu cité dans `passe_par` mais absent de la liste `lieux` s'ajoute tout seul à la fin.
+| Ligne absente | Ce que la page affiche |
+|---|---|
+| `photo:` dans `membres.md` | Les initiales du membre, qui n'est pas dans le jeu « Qui est-ce ? » |
+| `photo:` dans `bureau.md` | Le membre sans photo |
+| `strava:` dans `bureau.md` | Pas de lien Strava |
+| `site:` dans `partenaires.md` | Le partenaire sans lien |
 
-Si le haut d'un fichier contient une erreur, le site n'est pas mis à jour et la version précédente reste en ligne. GitHub l'indique par une croix rouge à côté du commit.
+## Publier
 
-## Le reste du dépôt
+```mermaid
+flowchart LR
+  main["push sur main"] --> jekyll1["Jekyll fabrique le site"] --> pages["branche gh-pages, en ligne ~1 min après"]
+  pr["PR ouverte ou mise à jour"] --> jekyll2["Jekyll fabrique le site"] --> apercu["gh-pages/pr-preview/pr-N"] --> commentaire["commentaire sur la PR avec le lien"]
+  fermee["PR fermée ou fusionnée"] --> supprime["aperçu supprimé"]
+```
 
-- `index.html` : la mise en page, les couleurs et le code de la page. Il assemble les rubriques, dans l'ordre de la page.
-- `_config.yml` : les réglages de Jekyll, qui fabrique le site.
-- `robots.txt` et `sitemap.xml` : ils disent aux moteurs de recherche quoi lire et où trouver la page. Ne pas les supprimer.
-- `.github/workflows/` : les deux publications automatiques, celle du site et celle des aperçus de PR.
-- `photos/` : les photos servies avec le site : dans `photos/bureau/` celles des membres du bureau, dans `photos/membres/` celles du trombinoscope, `apercu-liens.jpg`, l'image de l'aperçu des liens partagés (1200 × 630 pixels, tirée du logo), et `logo.png`, le logo carré que les moteurs de recherche affichent.
-- Les autres images et le PDF sont chargés depuis [courir-fonsegrives.fr](https://courir-fonsegrives.fr).
+- Ne modifiez pas `gh-pages` à la main.
+- Une PR ouverte depuis un fork n'a pas d'aperçu : son jeton ne peut pas écrire dans `gh-pages`.
+- Une croix rouge à côté d'un commit ou d'une PR veut dire que la fabrication a échoué, souvent à cause d'une erreur dans le haut d'un fichier `_rubriques/`. La version précédente du site, ou de l'aperçu, reste en ligne.
 
 ## Voir en local
 
-Le site passe par [Jekyll](https://jekyllrb.com), comme sur GitHub Pages. Ouvrir `index.html` directement dans un navigateur ne montre plus le contenu.
+Le site passe par [Jekyll](https://jekyllrb.com), comme sur GitHub Pages. Ouvrir `index.html` directement dans un navigateur ne montre pas le contenu.
 
 Avec Podman ou Docker, depuis la racine du dépôt :
 
@@ -72,11 +102,3 @@ podman run --rm -it -p 4000:4000 -v "$PWD:/srv:Z" -w /srv docker.io/library/ruby
 ```
 
 Puis ouvrir http://localhost:4000.
-
-## Publier
-
-Chaque push sur `main` fabrique le site avec Jekyll et le publie dans la branche `gh-pages`, que GitHub Pages sert (environ une minute). Ne modifiez pas `gh-pages` à la main.
-
-Une pull request (PR) reçoit un aperçu du site avec ses changements : un commentaire sur la PR donne le lien. L'aperçu se met à jour à chaque push sur la PR, et disparaît quand la PR est fermée ou fusionnée.
-
-Une croix rouge à côté d'un commit ou d'une PR veut dire que la fabrication a échoué : le site, ou l'aperçu, n'a pas été mis à jour et la version précédente reste en ligne.
