@@ -9,6 +9,7 @@
 {%- assign bureau = site.rubriques | where: "slug", "bureau" | first -%}
 {%- assign membres = site.rubriques | where: "slug", "membres" | first -%}
 {%- assign partenaires = site.rubriques | where: "slug", "partenaires" | first -%}
+{%- assign mentions = site.rubriques | where: "slug", "mentions" | first -%}
 <!doctype html>
 <html lang="fr">
 <head>
@@ -178,6 +179,7 @@ section{padding:clamp(3.5rem,8vw,6.5rem) var(--m)}
 
 footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem 2rem;border-top:1px solid var(--line)}
 .w footer{border-top-color:var(--line-w)}
+.mentions h3{margin:2rem 0 .25rem}
 
 @media (max-width:520px){.btn{font-size:1.6rem}.polas{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 1.25rem}}
 @media (max-width:820px){
@@ -322,8 +324,24 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
     {%- endfor %}
   </ul>
 </div></section>
+
+<section class="b mentions" id="mentions"><div class="in">
+  <h2>{{ mentions.titre }}</h2>
+  <div class="txt">
+    {%- assign e = mentions.editeur %}
+    <h3>Éditeur</h3>
+    <p>{{ e.nom }}, {{ e.statut }}<br>Siège : {{ e.siege }}<br>RNA : {{ e.rna }}<br><a href="mailto:{{ e.email }}">{{ e.email }}</a></p>
+    <h3>Directeur de la publication</h3>
+    <p>{{ mentions.directeur_publication.nom }}, {{ mentions.directeur_publication.qualite }}</p>
+    {%- assign h = mentions.hebergeur %}
+    <h3>Hébergeur</h3>
+    <p>{{ h.nom }}<br>{{ h.adresse }}<br><a href="{{ h.site }}">{{ h.site | remove: "https://" }}</a></p>
+    <h3>Données personnelles</h3>
+    {{ mentions.content }}
+  </div>
+</div></section>
 </main>
-<footer><span>© 2026 Courir Fonsegrives, section de l'USQF</span><span>Quint-Fonsegrives, Haute-Garonne</span></footer>
+<footer><span>© 2026 Courir Fonsegrives, section de l'USQF</span><span>Quint-Fonsegrives, Haute-Garonne</span><a href="#mentions">Mentions légales</a></footer>
 <script>
 new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.scrollPaddingTop=t.offsetHeight+parseFloat(getComputedStyle(t).top)+"px";}).observe(document.querySelector(".top"));
 (function(){
