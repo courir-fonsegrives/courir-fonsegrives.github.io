@@ -32,19 +32,28 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SportsOrganization",
-  "name": {{ mentions.editeur.nom | jsonify }},
-  "url": {{ site.url | append: "/" | jsonify }},
-  "description": {{ accueil.description_moteurs | jsonify }},
-  "image": {{ accueil.photo | jsonify }},
-  "email": {{ bureau.email | jsonify }},
-  "sport": "Course à pied",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Quint-Fonsegrives",
-    "postalCode": "31130",
-    "addressCountry": "FR"
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": {{ mentions.editeur.nom | jsonify }},
+      "url": {{ site.url | append: "/" | jsonify }}
+    },
+    {
+      "@type": "SportsOrganization",
+      "name": {{ mentions.editeur.nom | jsonify }},
+      "url": {{ site.url | append: "/" | jsonify }},
+      "description": {{ accueil.description_moteurs | jsonify }},
+      "image": {{ accueil.photo | jsonify }},
+      "email": {{ bureau.email | jsonify }},
+      "sport": "Course à pied",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Quint-Fonsegrives",
+        "postalCode": "31130",
+        "addressCountry": "FR"
+      }
+    }
+  ]
 }
 </script>
 <meta name="theme-color" content="#0079ba">
