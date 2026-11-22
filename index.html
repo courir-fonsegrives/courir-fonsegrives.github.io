@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Courir Fonsegrives · Le samedi matin, entre la Saune et Lauzerville</title>
-<meta name="description" content="Courir Fonsegrives, le club de course à pied de Quint-Fonsegrives. Trois sorties par semaine au départ de la salle Patrick Pépi, quatorze parcours et la Balade de la Saune.">
+<meta name="description" content="Courir Fonsegrives, le club de course à pied de Quint-Fonsegrives. Trois sorties par semaine au départ de la salle Patrick Pépi et la Balade de la Saune.">
 <link rel="canonical" href="https://courir-fonsegrives.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Courir Fonsegrives">
 <meta property="og:url" content="https://courir-fonsegrives.github.io/">
 <meta property="og:title" content="Courir Fonsegrives · Le samedi matin, entre la Saune et Lauzerville">
-<meta property="og:description" content="Courir Fonsegrives, le club de course à pied de Quint-Fonsegrives. Trois sorties par semaine au départ de la salle Patrick Pépi, quatorze parcours et la Balade de la Saune.">
+<meta property="og:description" content="Courir Fonsegrives, le club de course à pied de Quint-Fonsegrives. Trois sorties par semaine au départ de la salle Patrick Pépi et la Balade de la Saune.">
 <meta property="og:image" content="https://courir-fonsegrives.github.io/photos/apercu-liens.jpg">
 <meta property="og:image:alt" content="Logo de Courir Fonsegrives, en lettres blanches sur fond turquoise, avec des noms de lieux de Quint-Fonsegrives.">
 <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
       "@type": "SportsOrganization",
       "name": "Courir Fonsegrives",
       "url": "https://courir-fonsegrives.github.io/",
-      "description": "Courir Fonsegrives, le club de course à pied de Quint-Fonsegrives. Trois sorties par semaine au départ de la salle Patrick Pépi, quatorze parcours et la Balade de la Saune.",
+      "description": "Courir Fonsegrives, le club de course à pied de Quint-Fonsegrives. Trois sorties par semaine au départ de la salle Patrick Pépi et la Balade de la Saune.",
       "image": "https://courir-fonsegrives.fr/images/Jmimi/fond3.jpg",
       "logo": "https://courir-fonsegrives.github.io/photos/logo.png",
       "email": "courirfonsegrives31@gmail.com",
@@ -100,7 +100,7 @@ section{padding:clamp(3.5rem,8vw,6.5rem) var(--m)}
 
 .top{position:sticky;top:0;z-index:5;background:var(--blue);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0 1.5rem;padding:.75rem max(var(--m),calc(50% - 36rem))}
 .wm{font-family:var(--display);font-weight:700;font-size:2rem;line-height:1;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:.4rem 0}
-.wm i,h1 i,.wall i{font-style:normal;color:var(--yellow)}
+.wm i,h1 i{font-style:normal;color:var(--yellow)}
 .top nav{display:flex;flex-wrap:wrap;gap:0 1rem;margin-inline:-.25rem;font-weight:600;font-size:.95rem}
 .top nav a{text-decoration:none;padding:.65rem .25rem}
 .top nav a:hover{text-decoration:underline}
@@ -118,19 +118,6 @@ section{padding:clamp(3.5rem,8vw,6.5rem) var(--m)}
 /* Présentation */
 .about .in{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1.5rem clamp(2rem,5vw,5rem)}
 .about h2{font-size:clamp(2.6rem,5.4vw,4.5rem);margin:0}
-
-/* Les lieux : le mur de noms et les parcours */
-.dos .txt{margin-bottom:2rem}
-.wall{position:relative;display:flex;flex-wrap:wrap;gap:0 clamp(1.1rem,2vw,1.75rem);align-items:baseline}
-.wall button{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,5.6vw,5.25rem);line-height:1;text-transform:uppercase;letter-spacing:.03em;color:var(--soft);background:none;border:0;padding:.25rem 0;cursor:pointer;transition:color .25s var(--ease)}
-.wall button:hover{color:#fff}
-.wall button[aria-pressed="true"]{color:var(--yellow);text-decoration:underline;text-decoration-thickness:.05em;text-underline-offset:.1em}
-.panel{margin-top:2.5rem;border-top:3px solid #fff;padding-top:1.25rem;display:grid;grid-template-columns:minmax(0,16rem) minmax(0,1fr);gap:1rem 3rem;min-height:11rem}
-.panel .pl{color:var(--yellow);font-size:clamp(2.4rem,4.4vw,3.5rem);line-height:.92;margin:0 0 .25rem}
-.panel ul{list-style:none;padding:0}
-.panel li{display:grid;grid-template-columns:5.5rem minmax(0,1fr) auto;gap:.25rem 1rem;align-items:baseline;padding:.6rem 0;border-bottom:1px solid var(--line)}
-.panel li b{font-family:var(--display);font-weight:700;font-size:2.5rem;line-height:.9;white-space:nowrap}
-.panel li a{display:inline-block;font-weight:600;white-space:nowrap;padding:.55rem 0;margin:-.55rem 0}
 
 /* La semaine */
 .times{list-style:none;padding:0;border-top:3px solid var(--blue)}
@@ -217,11 +204,9 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
   .top{top:-3.55rem;padding-bottom:0}
   .top nav{width:calc(100% + .5rem);flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-right:2rem;mask-image:linear-gradient(to right,#000 calc(100% - 2rem),transparent);font-size:.9rem}
   .top nav a{white-space:nowrap}
-  .panel,.times li,.balade .in,.join .g{grid-template-columns:minmax(0,1fr)}
+  .times li,.balade .in,.join .g{grid-template-columns:minmax(0,1fr)}
   .partners li{grid-template-columns:minmax(0,1fr)}
   .partners img{max-height:20rem}
-  .panel li{grid-template-columns:4.4rem minmax(0,1fr)}
-  .panel li a{grid-column:2}
   .balade img{width:min(15rem,60vw)}
 }
 @media (prefers-reduced-motion:reduce){
@@ -245,7 +230,7 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
 <a class="skip" href="#contenu">Aller au contenu</a>
 <header class="top">
   <a class="wm" href="#contenu" aria-label="Courir Fonsegrives, haut de page">Cour<i>i</i>r Fonsegr<i>i</i>ves</a>
-  <nav aria-label="Rubriques"><a href="#accueil">Accueil</a><a href="#presentation">Le club</a><a href="#lieux">Lieux</a><a href="#semaine">Semaine</a><a href="#balade">Balade</a><a href="#adhesion">Adhésion</a><a href="#bureau">Bureau</a><a href="#membres">Membres</a><a href="#partenaires">Partenaires</a></nav>
+  <nav aria-label="Rubriques"><a href="#accueil">Accueil</a><a href="#presentation">Le club</a><a href="#semaine">Semaine</a><a href="#balade">Balade</a><a href="#adhesion">Adhésion</a><a href="#bureau">Bureau</a><a href="#membres">Membres</a><a href="#partenaires">Partenaires</a></nav>
 </header>
 <main id="contenu" tabindex="-1">
 <div class="hero" id="accueil">
@@ -265,18 +250,6 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
 
 <p>Plus simplement, c'est le plaisir de retrouver quelques amis pour aller trottiner et papoter sur quelques kilomètres autour de Quint-Fonsegrives. Et vous aurez peut-être aussi l'envie de vous impliquer un peu dans la vie associative et locale de la commune.</p>
 </div>
-</div></section>
-
-<section class="b dos" id="lieux"><div class="in">
-  <h2>Les lieux où l'on court</h2>
-  <div class="txt"><p>Nos quatorze parcours passent par ces lieux. Choisissez-en un pour voir les parcours qui le traversent. Tous partent de la salle Patrick Pépi, et tous ont été courus et approuvés par des membres du club. Pour en proposer un autre, contactez un membre du bureau.</p>
-</div>
-  <div class="wall" id="wall" role="group" aria-label="Lieux traversés par nos parcours"></div>
-  <div class="panel" aria-live="polite">
-    <div><h3 class="pl" id="place">La Saune</h3><p id="count"></p></div>
-    <ul id="list"></ul>
-  </div>
-  <noscript><p class="txt">Les quatorze parcours du club, de 4 à 21 km, sont sur OpenRunner sous le nom « CourirFonsegrives ».</p></noscript>
 </div></section>
 
 <section class="w week" id="semaine"><div class="in">
@@ -577,27 +550,6 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
 <footer><span>© 2026 Courir Fonsegrives, association adhérente de l'USQF</span><span>Quint-Fonsegrives, Haute-Garonne</span><a href="#mentions">Mentions légales</a></footer>
 <script>
 new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.scrollPaddingTop=t.offsetHeight+parseFloat(getComputedStyle(t).top)+"px";}).observe(document.querySelector(".top"));
-(function(){
-  var R=[{"km":4,"texte":"Petit aller-retour plat par la Saune jusqu'au pont de la route de Saint-Orens. Pour les débutants, les pressés, les blessés…","openrunner":3098041,"passe_par":["La Saune","Saint-Orens"]},{"km":5,"texte":"Petit tour dans les quartiers de Quint-Fonsegrives par ses cours d'eau, avec quelques rampaillous sympathiques.","openrunner":3098519,"passe_par":["La Saune","Grand Port de Mer"]},{"km":5,"texte":"Petit aller-retour plat par la Saune jusqu'à la route de Labège.","openrunner":3098071,"passe_par":["La Saune","Labège"]},{"km":8,"texte":"Très local mais champêtre, par la Saune, les arrières de l'aérodrome de Lasbordes, et retour par les Arnis.","openrunner":3109729,"passe_par":["La Saune","Lasbordes","Les Arnis"]},{"km":10,"texte":"Le on ne peut plus classique aller-retour au tennis de Lauzerville.","openrunner":3095165,"passe_par":["Lauzerville"]},{"km":11,"texte":"Le tennis de Lauzerville, mais en boucle. L'aller se fait le long de la Saune.","openrunner":3094866,"passe_par":["La Saune","Lauzerville"]},{"km":11,"texte":"Pour les soirées d'hiver où il fait nuit. Fonsegrives, stade de Balma et retour.","openrunner":3097173,"passe_par":["Balma"]},{"km":11,"texte":"Le parcours de la Balade de la Saune au départ de Pépi, donc un peu plus long que l'original.","openrunner":3108866,"passe_par":["La Saune"]},{"km":12,"texte":"Un parcours pour les amateurs de côtes, par Garabet, Flourens et Rebeillou.","openrunner":3095256,"passe_par":["Garabet","Rebeillou","Flourens"]},{"km":14,"texte":"Le très classique aller-retour à Roquette, avec (ou pas) la montée de la côte.","openrunner":3095199,"passe_par":["Roquette"]},{"km":15,"texte":"Quint-Fonsegrives puis Balma, retour par les Argoulets et la route de Castres. Quelques côtes.","openrunner":3097985,"passe_par":["Balma","Les Argoulets"]},{"km":16,"texte":"Les jours de pique-nique à la ferme des 50. Aller simple, poussé jusqu'à l'écluse de Castanet.","openrunner":3098513,"passe_par":["Ferme des 50","Castanet"]},{"km":20,"texte":"Un petit 20 bornes qui monte et qui descend, passage par Mons oblige. À faire en groupe.","openrunner":3111096,"passe_par":["Mons"]},{"km":21,"texte":"Une boucle plutôt champêtre. La Saune, Lauzerville, Auzielle, Saint-Orens, Catala, la Saune.","openrunner":3095112,"passe_par":["La Saune","Lauzerville","Saint-Orens","Auzielle","Catala"]}],ordre=["La Saune","Lauzerville","Garabet","Rebeillou","Roquette","Grand Port de Mer","Saint-Orens","Flourens","Balma","Lasbordes","Les Arnis","Mons","Labège","Les Argoulets","Auzielle","Catala","Ferme des 50","Castanet"];
-  R.forEach(function(r){r.passe_par.forEach(function(l){if(ordre.indexOf(l)<0)ordre.push(l);});});
-  var P=ordre.map(function(l){return [l,R.filter(function(r){return r.passe_par.indexOf(l)>=0;})];});
-  var wall=document.getElementById("wall"),list=document.getElementById("list"),place=document.getElementById("place"),count=document.getElementById("count"),btns=[];
-  function pick(i){
-    btns.forEach(function(b,j){b.setAttribute("aria-pressed",j===i?"true":"false");});
-    place.textContent=P[i][0];
-    var n=P[i][1].length;
-    count.textContent=n===1?"Un parcours y passe.":n+" parcours y passent.";
-    list.innerHTML=P[i][1].map(function(r){
-      return "<li><b>"+r.km+" km</b><span>"+r.texte+'</span><a href="http://www.openrunner.com/index.php?id='+r.openrunner+'">Voir le plan<span class="sr"> du parcours de '+r.km+" km</span></a></li>";
-    }).join("");
-  }
-  P.forEach(function(p,i){
-    var b=document.createElement("button");b.type="button";b.textContent=p[0];
-    b.addEventListener("click",function(){pick(i);});
-    wall.appendChild(b);btns.push(b);
-  });
-  pick(0);
-})();
 (function(){
   var sec=document.getElementById("membres"),ul=document.getElementById("polas"),score=document.getElementById("score");
   var cache="Nom caché",lis=[].slice.call(ul.children),cartes=[].slice.call(ul.querySelectorAll("li:not(.sans) .pola"));
