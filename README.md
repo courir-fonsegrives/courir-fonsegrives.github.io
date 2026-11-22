@@ -1,6 +1,6 @@
-# courir-prototype
+# Courir Fonsegrives
 
-Prototype du site de Courir Fonsegrives, club de course à pied de Quint-Fonsegrives.
+Site de Courir Fonsegrives, club de course à pied de Quint-Fonsegrives.
 
 En ligne : https://courir-fonsegrives.github.io/
 
