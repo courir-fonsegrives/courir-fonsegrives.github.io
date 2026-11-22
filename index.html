@@ -29,22 +29,23 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+{%- assign accueil_url = site.url | append: "/" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
-      "name": {{ mentions.editeur.nom | jsonify }},
-      "url": {{ site.url | append: "/" | jsonify }}
+      "name": {% include json.html valeur=mentions.editeur.nom %},
+      "url": {% include json.html valeur=accueil_url %}
     },
     {
       "@type": "SportsOrganization",
-      "name": {{ mentions.editeur.nom | jsonify }},
-      "url": {{ site.url | append: "/" | jsonify }},
-      "description": {{ accueil.description_moteurs | jsonify }},
-      "image": {{ accueil.photo | jsonify }},
-      "email": {{ bureau.email | jsonify }},
+      "name": {% include json.html valeur=mentions.editeur.nom %},
+      "url": {% include json.html valeur=accueil_url %},
+      "description": {% include json.html valeur=accueil.description_moteurs %},
+      "image": {% include json.html valeur=accueil.photo %},
+      "email": {% include json.html valeur=bureau.email %},
       "sport": "Course à pied",
       "address": {
         "@type": "PostalAddress",
@@ -384,7 +385,7 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
 <script>
 new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.scrollPaddingTop=t.offsetHeight+parseFloat(getComputedStyle(t).top)+"px";}).observe(document.querySelector(".top"));
 (function(){
-  var R={{ lieux.parcours | jsonify }},ordre={{ lieux.lieux | jsonify }};
+  var R={% include json.html valeur=lieux.parcours %},ordre={% include json.html valeur=lieux.lieux %};
   R.forEach(function(r){r.passe_par.forEach(function(l){if(ordre.indexOf(l)<0)ordre.push(l);});});
   var P=ordre.map(function(l){return [l,R.filter(function(r){return r.passe_par.indexOf(l)>=0;})];});
   var wall=document.getElementById("wall"),list=document.getElementById("list"),place=document.getElementById("place"),count=document.getElementById("count"),btns=[];
@@ -406,8 +407,8 @@ new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.
 })();
 (function(){
   var sec=document.getElementById("membres"),ul=document.getElementById("polas"),score=document.getElementById("score");
-  var cache={{ membres.jeu_cache | jsonify }},lis=[].slice.call(ul.children),cartes=[].slice.call(ul.querySelectorAll("li:not(.sans) .pola"));
-  var bouton=document.createElement("button");bouton.type="button";bouton.className="jouer";bouton.textContent={{ membres.jeu | jsonify }};
+  var cache={% include json.html valeur=membres.jeu_cache %},lis=[].slice.call(ul.children),cartes=[].slice.call(ul.querySelectorAll("li:not(.sans) .pola"));
+  var bouton=document.createElement("button");bouton.type="button";bouton.className="jouer";bouton.textContent={% include json.html valeur=membres.jeu %};
   function compter(){score.textContent=ul.querySelectorAll('[aria-pressed="true"]').length+" / "+cartes.length;}
   function melanger(t){
     t=t.slice();
