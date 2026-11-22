@@ -11,8 +11,12 @@ _rubriques/          le texte de chaque rubrique (voir ci-dessous)
 photos/
 ├── bureau/          les photos des membres du bureau
 ├── membres/         les photos du trombinoscope
+├── partenaires/     les logos des partenaires
+├── accueil.jpg      la grande photo du haut de la page
+├── affiche-balade-2026.jpg l'affiche de la Balade de la Saune
 ├── apercu-liens.jpg l'image de l'aperçu des liens partagés (1200 × 630 pixels, tirée du logo)
 └── logo.png         le logo carré que les moteurs de recherche affichent
+documents/           le bulletin d'adhésion (PDF)
 index.html           la mise en page, les couleurs et le code ; assemble les rubriques dans l'ordre de la page
 _includes/           deux morceaux de code repris par index.html (icônes des réseaux, texte pour le JSON)
 _config.yml          les réglages de Jekyll, qui fabrique le site
@@ -20,8 +24,6 @@ robots.txt           pour les moteurs de recherche, avec sitemap.xml : ne pas le
 sitemap.xml
 .github/workflows/   la publication du site et les aperçus de PR
 ```
-
-Les autres images et le PDF sont chargés depuis [courir-fonsegrives.fr](https://courir-fonsegrives.fr).
 
 ## Modifier un texte
 

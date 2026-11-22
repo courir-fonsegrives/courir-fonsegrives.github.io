@@ -1,7 +1,7 @@
 ---
 titre: "La Balade de la Saune"
 date_course: "Prochaine édition en octobre 2027"
-affiche: https://courir-fonsegrives.fr/images/2026/affiche-balade-2026.jpg
+affiche: "photos/affiche-balade-2026.jpg"
 affiche_description: "Affiche de la Balade de la Saune 2026."
 site: http://www.baladedelasaune.fr
 bouton: "Aller sur baladedelasaune.fr"
