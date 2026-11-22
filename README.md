@@ -29,7 +29,6 @@ Les autres images et le PDF sont chargés depuis [courir-fonsegrives.fr](https:/
 |---|---|
 | `accueil.md` | La grande photo, le titre et le bouton du haut. Le titre d'onglet et la description servent aussi à l'aperçu des liens partagés |
 | `presentation.md` | « Course à pied, plaisir et convivialité… » |
-| `lieux.md` | Les lieux et les quatorze parcours |
 | `semaine.md` | Les trois sorties de la semaine |
 | `balade.md` | La Balade de la Saune |
 | `adhesion.md` | Les tarifs et comment adhérer |
@@ -66,8 +65,6 @@ Un fichier a deux parties :
 **Bureau** (`bureau.md`, photos dans `photos/bureau/`) : déposer la photo, puis mettre son chemin après `photo:`. L'adresse de la page Strava du club va après `strava:`.
 
 **Partenaires** (`partenaires.md`) : copier un bloc qui commence par `- nom:`, puis changer ses valeurs. `logo_largeur` et `logo_hauteur` sont la taille de l'image en pixels. Sous `reseaux:`, chaque bloc `- nom:` ajoute un lien vers un réseau social. Instagram, Facebook, Telegram et Twitter ont leur icône.
-
-**Parcours** (`lieux.md`) : copier un bloc qui commence par `- km:`, puis changer ses valeurs. Le nombre après `openrunner:` est le numéro du parcours sur OpenRunner. Un lieu cité dans `passe_par` mais absent de la liste `lieux` s'ajoute tout seul à la fin.
 
 Certaines lignes sont facultatives :
 
