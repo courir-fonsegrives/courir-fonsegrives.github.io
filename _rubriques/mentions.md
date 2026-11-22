@@ -16,6 +16,6 @@ hebergeur:
 ---
 Le trombinoscope et la rubrique du bureau montrent le nom et la photo de membres du club. Ils sont publiés avec l'accord de chaque membre.
 
-Chaque membre peut demander le retrait ou la correction de sa photo ou de son nom, sur simple demande à l'adresse du club donnée ci-dessus.
+Chaque membre peut demander la suppression ou la correction de ses informations personnelles (nom, photo) par simple mail au club, à l'adresse donnée ci-dessus.
 
 Le site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience.
