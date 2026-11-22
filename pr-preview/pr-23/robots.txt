@@ -1,3 +1,0 @@
-User-agent: *
-
-Sitemap: https://courir-fonsegrives.github.io/sitemap.xml
