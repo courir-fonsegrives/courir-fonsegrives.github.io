@@ -20,19 +20,28 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SportsClub",
-  "name": "Courir Fonsegrives",
-  "url": "https://courir-fonsegrives.github.io/",
-  "description": "Courir Fonsegrives, le club de course à pied de Quint-Fonsegrives. Trois sorties par semaine au départ de la salle Patrick Pépi, quatorze parcours et la Balade de la Saune.",
-  "image": "https://courir-fonsegrives.fr/images/Jmimi/fond3.jpg",
-  "email": "courirfonsegrives31@gmail.com",
-  "sport": "Course à pied",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Quint-Fonsegrives",
-    "postalCode": "31130",
-    "addressCountry": "FR"
-  }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Courir Fonsegrives",
+      "url": "https://courir-fonsegrives.github.io/"
+    },
+    {
+      "@type": "SportsOrganization",
+      "name": "Courir Fonsegrives",
+      "url": "https://courir-fonsegrives.github.io/",
+      "description": "Courir Fonsegrives, le club de course à pied de Quint-Fonsegrives. Trois sorties par semaine au départ de la salle Patrick Pépi, quatorze parcours et la Balade de la Saune.",
+      "image": "https://courir-fonsegrives.fr/images/Jmimi/fond3.jpg",
+      "email": "courirfonsegrives31@gmail.com",
+      "sport": "Course à pied",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Quint-Fonsegrives",
+        "postalCode": "31130",
+        "addressCountry": "FR"
+      }
+    }
+  ]
 }
 </script>
 <meta name="theme-color" content="#0079ba">

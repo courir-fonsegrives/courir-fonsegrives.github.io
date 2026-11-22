@@ -1,5 +1,3 @@
 User-agent: *
-Allow: /
-Disallow: /pr-preview/
 
 Sitemap: https://courir-fonsegrives.github.io/sitemap.xml
