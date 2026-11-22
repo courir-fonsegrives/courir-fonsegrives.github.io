@@ -10,7 +10,7 @@ Chaque rubrique du site a son fichier dans [`_rubriques/`](_rubriques) :
 
 | Fichier | Rubrique |
 |---|---|
-| `accueil.md` | La grande photo, le titre et le bouton du haut |
+| `accueil.md` | La grande photo, le titre et le bouton du haut ; ces textes et la photo servent aussi à l'aperçu des liens partagés |
 | `presentation.md` | « Course à pied, plaisir et convivialité… » |
 | `lieux.md` | Les lieux et les quatorze parcours |
 | `semaine.md` | Les trois sorties de la semaine |
