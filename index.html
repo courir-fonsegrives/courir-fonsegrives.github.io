@@ -402,7 +402,7 @@ new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.
     var n=P[i][1].length;
     count.textContent=n===1?"Un parcours y passe.":n+" parcours y passent.";
     list.innerHTML=P[i][1].map(function(r){
-      return "<li><b>"+r.km+" km</b><span>"+r.texte+'</span><a href="http://www.openrunner.com/index.php?id='+r.openrunner+'">Voir le plan<span class="sr"> du parcours de '+r.km+" km</span></a></li>";
+      return "<li><b>"+r.km+" km</b><span>"+r.texte+'</span><a href="https://www.openrunner.com/route-details/'+r.openrunner+'">Voir le plan<span class="sr"> du parcours de '+r.km+" km</span></a></li>";
     }).join("");
   }
   P.forEach(function(p,i){
