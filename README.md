@@ -16,7 +16,7 @@ Chaque rubrique du site a son fichier dans [`_rubriques/`](_rubriques) :
 | `semaine.md` | Les trois sorties de la semaine |
 | `balade.md` | La Balade de la Saune |
 | `adhesion.md` | Les tarifs et comment adhérer |
-| `bureau.md` | Les membres du bureau, leurs photos, l'adresse mail du club |
+| `bureau.md` | Les membres du bureau, leurs photos, l'adresse mail et la page Strava du club |
 | `membres.md` | Le trombinoscope : la liste des membres et leurs photos |
 | `partenaires.md` | Les partenaires du club, leur logo et leur site |
 | `mentions.md` | Les mentions légales : éditeur, directeur de la publication, hébergeur, données personnelles |
@@ -34,6 +34,8 @@ Un fichier a deux parties :
 - **En bas, après le second `---`** : les paragraphes, en Markdown. Laissez une ligne vide entre deux paragraphes. Un lien s'écrit `[texte du lien](https://adresse)`.
 
 Changer la photo d'un membre du bureau : déposer la photo dans `photos/bureau/` (bouton « Add file », puis « Upload files »), puis mettre son chemin après `photo:` dans `bureau.md`. Sans ligne `photo:`, le membre s'affiche sans photo.
+
+Changer la page Strava du club : mettre son adresse après `strava:` dans `bureau.md`. Sans ligne `strava:`, la page n'affiche pas le lien Strava.
 
 Ajouter un membre au trombinoscope : copier un bloc qui commence par `- prenom:` dans `membres.md`, le coller à sa place dans l'ordre alphabétique des noms, et changer ses valeurs. Déposer sa photo dans `photos/membres/` (bouton « Add file », puis « Upload files »), puis mettre son chemin après `photo:`. Sans ligne `photo:`, le membre s'affiche avec ses initiales et n'est pas dans le jeu « Qui est-ce ? ».
 
@@ -55,7 +57,7 @@ Si le haut d'un fichier contient une erreur, le site n'est pas mis à jour et la
 - `_config.yml` : les réglages de Jekyll, qui fabrique le site.
 - `robots.txt` et `sitemap.xml` : ils disent aux moteurs de recherche quoi lire et où trouver la page. Ne pas les supprimer.
 - `.github/workflows/` : les deux publications automatiques, celle du site et celle des aperçus de PR.
-- `photos/` : les photos servies avec le site : dans `photos/bureau/` celles des membres du bureau, dans `photos/membres/` celles du trombinoscope, et `apercu-liens.jpg`, l'image de l'aperçu des liens partagés (1200 × 630 pixels, tirée du logo).
+- `photos/` : les photos servies avec le site : dans `photos/bureau/` celles des membres du bureau, dans `photos/membres/` celles du trombinoscope, `apercu-liens.jpg`, l'image de l'aperçu des liens partagés (1200 × 630 pixels, tirée du logo), et `logo.png`, le logo carré que les moteurs de recherche affichent.
 - Les autres images et le PDF sont chargés depuis [courir-fonsegrives.fr](https://courir-fonsegrives.fr).
 
 ## Voir en local
