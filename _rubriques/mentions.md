@@ -17,7 +17,7 @@ hebergeur:
   adresse: "88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis"
   site: "https://github.com"
 ---
-Le trombinoscope et la rubrique du bureau montrent le nom et la photo de membres du club. Ils sont publiés avec l'accord de chaque membre.
+Le trombinoscope montre le prénom, l'initiale du nom et la photo de membres du club. La rubrique du bureau montre le nom et la photo de ses membres. Prénoms, noms et photos sont publiés avec l'accord de chaque membre.
 
 Chaque membre peut demander la suppression ou la correction de ses informations personnelles (nom, photo) par simple mail au club, à l'adresse donnée ci-dessus.
 

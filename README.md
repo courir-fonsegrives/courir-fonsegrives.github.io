@@ -55,10 +55,11 @@ Un fichier a deux parties :
 
 **Trombinoscope** (`membres.md`, photos dans `photos/membres/`) :
 
-- Ajouter un membre : copier un bloc qui commence par `- prenom:`, le coller dans l'ordre alphabétique des noms, puis changer ses valeurs.
+- Ne jamais écrire le nom de famille complet d'un membre dans le dépôt, ni dans `membres.md` ni dans le nom d'une photo : le dépôt est public. Seule l'initiale du nom va après `initiale:`.
+- Ajouter un membre : copier un bloc qui commence par `- prenom:`, le coller dans l'ordre alphabétique des prénoms, puis changer ses valeurs.
 - Retirer un membre : supprimer son bloc, puis sa photo.
-- Corriger un nom : changer `prenom:` ou `nom:` dans son bloc.
-- Ajouter une photo : la déposer, puis mettre son chemin après `photo:`.
+- Corriger un nom : changer `prenom:` ou `initiale:` dans son bloc.
+- Ajouter une photo : la déposer sous le nom `prenom-initiale.jpg` (par exemple `melanie-a.jpg`), puis mettre son chemin après `photo:`.
 - Changer une photo : déposer la nouvelle sous le même nom que l'ancienne, elle la remplace.
 - La page recadre la photo en carré, centrée un peu au-dessus du milieu. Réduire une photo de téléphone à environ 400 pixels de large avant de la déposer garde la page rapide.
 
