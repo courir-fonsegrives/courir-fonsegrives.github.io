@@ -19,6 +19,7 @@ Chaque rubrique du site a son fichier dans [`_rubriques/`](_rubriques) :
 | `bureau.md` | Les membres du bureau, leurs photos, l'adresse mail du club |
 | `membres.md` | Le trombinoscope : la liste des membres et leurs photos |
 | `partenaires.md` | Les partenaires du club, leur logo et leur site |
+| `mentions.md` | Les mentions légales : éditeur, directeur de la publication, hébergeur, données personnelles |
 
 Pour modifier un texte sur GitHub :
 

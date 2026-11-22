@@ -167,6 +167,7 @@ section{padding:clamp(3.5rem,8vw,6.5rem) var(--m)}
 
 footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem 2rem;border-top:1px solid var(--line)}
 .w footer{border-top-color:var(--line-w)}
+.mentions h3{margin:2rem 0 .25rem}
 
 @media (max-width:520px){.btn{font-size:1.6rem}.polas{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 1.25rem}}
 @media (max-width:820px){
@@ -420,8 +421,27 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
     </li>
   </ul>
 </div></section>
+
+<section class="b mentions" id="mentions"><div class="in">
+  <h2>Mentions légales</h2>
+  <div class="txt">
+    <h3>Éditeur</h3>
+    <p>Courir Fonsegrives, Association loi 1901<br>Siège : La Marne, rue des Coteaux, 31130 Quint-Fonsegrives<br>RNA : W313001782<br><a href="mailto:courirfonsegrives31@gmail.com">courirfonsegrives31@gmail.com</a></p>
+    <h3>Directeur de la publication</h3>
+    <p>Ludivine Querbes, Présidente de Courir Fonsegrives</p>
+    <h3>Hébergeur</h3>
+    <p>GitHub, Inc.<br>88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis<br><a href="https://github.com">github.com</a></p>
+    <h3>Données personnelles</h3>
+    <p>Le trombinoscope et la rubrique du bureau montrent le nom et la photo de membres du club. Ils sont publiés avec l'accord de chaque membre.</p>
+
+<p>Chaque membre peut demander la suppression ou la correction de ses informations personnelles (nom, photo) par simple mail au club, à l'adresse donnée ci-dessus.</p>
+
+<p>Le site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience.</p>
+
+  </div>
+</div></section>
 </main>
-<footer><span>© 2026 Courir Fonsegrives, section de l'USQF</span><span>Quint-Fonsegrives, Haute-Garonne</span></footer>
+<footer><span>© 2026 Courir Fonsegrives, section de l'USQF</span><span>Quint-Fonsegrives, Haute-Garonne</span><a href="#mentions">Mentions légales</a></footer>
 <script>
 new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.scrollPaddingTop=t.offsetHeight+parseFloat(getComputedStyle(t).top)+"px";}).observe(document.querySelector(".top"));
 (function(){
