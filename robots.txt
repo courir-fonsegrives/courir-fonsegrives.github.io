@@ -1,7 +1,5 @@
 ---
 ---
 User-agent: *
-Allow: /
-Disallow: /pr-preview/
 
 Sitemap: {{ site.url }}/sitemap.xml
