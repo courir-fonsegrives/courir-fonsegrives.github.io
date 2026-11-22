@@ -7,3 +7,5 @@ kramdown:
   smart_quotes: apos,apos,quot,quot
 
 strict_front_matter: true
+
+url: https://courir-fonsegrives.github.io
