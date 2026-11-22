@@ -49,8 +49,8 @@
       "sport": "Course à pied",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Quint-Fonsegrives",
-        "postalCode": "31130",
+        "addressLocality": {% include json.html valeur=mentions.editeur.siege.ville %},
+        "postalCode": {% include json.html valeur=mentions.editeur.siege.code_postal %},
         "addressCountry": "FR"
       }
     }
@@ -370,7 +370,7 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
   <div class="txt">
     {%- assign e = mentions.editeur %}
     <h3>Éditeur</h3>
-    <p>{{ e.nom }}, {{ e.statut }}<br>Siège : {{ e.siege }}<br>RNA : {{ e.rna }}<br><a href="mailto:{{ e.email }}">{{ e.email }}</a></p>
+    <p>{{ e.nom }}, {{ e.statut }}<br>Siège : {{ e.siege.adresse }}, {{ e.siege.code_postal }} {{ e.siege.ville }}<br>RNA : {{ e.rna }}<br><a href="mailto:{{ e.email }}">{{ e.email }}</a></p>
     <h3>Directeur de la publication</h3>
     <p>{{ mentions.directeur_publication.nom }}, {{ mentions.directeur_publication.qualite }}</p>
     {%- assign h = mentions.hebergeur %}
