@@ -194,7 +194,6 @@ section{padding:clamp(3.5rem,8vw,6.5rem) var(--m)}
 .pola img,.ini{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:50% 30%;background:var(--soft)}
 .ini{display:grid;place-content:center;font-family:var(--display);font-weight:700;font-size:3.5rem;color:var(--blue)}
 .pola p,.pola::after{font-family:var(--display);font-weight:700;font-size:1.75rem;line-height:1;text-align:center;padding:.5rem 0 .6rem;overflow-wrap:anywhere}
-.pola .nom{display:none}
 
 /* Le jeu « Qui est-ce ? » : tout découle de data-mode sur la section et d'aria-pressed sur chaque carte. */
 .tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0 1.5rem}
@@ -208,7 +207,7 @@ section{padding:clamp(3.5rem,8vw,6.5rem) var(--m)}
 .membres[data-mode="jeu"] .pola{cursor:pointer}
 .membres[data-mode="jeu"] [aria-pressed="false"]::after{content:"?";display:block;color:var(--blue)}
 .membres[data-mode="jeu"] [aria-pressed="true"]{animation:flip .45s var(--ease)}
-.membres[data-mode="jeu"] [aria-pressed="true"] .nom{display:block}
+.membres[data-mode="jeu"] .pola[aria-pressed="true"] p{display:block}
 @keyframes flip{from{transform:perspective(40rem) rotateY(80deg)}}
 
 /* Les partenaires */
@@ -343,11 +342,11 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
   <div class="regle"><p>{{ membres.jeu_consigne }}</p><p aria-live="polite"><b id="score"></b> {{ membres.jeu_compteur }}</p></div>
   <ul class="polas" id="polas">
     {%- for m in membres.membres %}
+    {%- assign nom_affiche = m.prenom | append: " " | append: m.initiale | append: "." %}
     <li{% unless m.photo %} class="sans"{% endunless %}><div class="pola">
-      {%- if m.photo %}<img src="{{ m.photo }}" alt="{{ m.prenom }} {{ m.nom }}" loading="lazy">
-      {%- else %}<span class="ini" role="img" aria-label="{{ m.prenom }} {{ m.nom }}">{{ m.prenom | slice: 0 }}{{ m.nom | slice: 0 }}</span>{% endif -%}
-      <p aria-hidden="true">{{ m.prenom }} {{ m.nom | slice: 0 }}.</p>
-      {%- if m.photo %}<p class="nom">{{ m.prenom }} {{ m.nom }}</p>{% endif -%}
+      {%- if m.photo %}<img src="{{ m.photo }}" alt="{{ nom_affiche }}" loading="lazy">
+      {%- else %}<span class="ini" role="img" aria-label="{{ nom_affiche }}">{{ m.prenom | slice: 0 }}{{ m.initiale }}</span>{% endif -%}
+      <p aria-hidden="true">{{ nom_affiche }}</p>
     </div></li>
     {%- endfor %}
   </ul>
@@ -425,7 +424,7 @@ new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.
   }
   function montrer(c,vu){
     c.setAttribute("aria-pressed",vu?"true":"false");
-    c.setAttribute("aria-label",vu?c.querySelector(".nom").textContent:cache);
+    c.setAttribute("aria-label",vu?c.querySelector("p").textContent:cache);
   }
   function mode(m){
     var jeu=m==="jeu";
@@ -433,7 +432,7 @@ new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.
     bouton.setAttribute("aria-pressed",jeu?"true":"false");
     (jeu?melanger(lis):lis).forEach(function(li){ul.appendChild(li);});
     cartes.forEach(function(c){
-      c.querySelector("img").alt=jeu?"":c.querySelector(".nom").textContent;
+      c.querySelector("img").alt=jeu?"":c.querySelector("p").textContent;
       if(jeu){c.setAttribute("role","button");c.tabIndex=0;montrer(c,false);}
       else ["role","tabindex","aria-pressed","aria-label"].forEach(function(a){c.removeAttribute(a);});
     });
