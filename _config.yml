@@ -8,4 +8,14 @@ kramdown:
 
 strict_front_matter: true
 
-url: https://courir-fonsegrives.github.io
+url: https://courir-fonsegrives.fr
+# Left unset, jekyll-github-metadata asks the Pages API for it as soon as a
+# redirect page is built, and the build fails without a token that can read it.
+baseurl: ""
+
+# github-pages leaves CNAME out of the build by default.
+include: [CNAME]
+
+plugins: [jekyll-redirect-from]
+redirect_from:
+  json: false
