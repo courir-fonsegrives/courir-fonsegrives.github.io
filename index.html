@@ -15,8 +15,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ accueil.titre_onglet }}</title>
-<meta name="description" content="{{ accueil.description_moteurs }}">
+<title>{{ accueil.titre_onglet | escape }}</title>
+<meta name="description" content="{{ accueil.description_moteurs | escape }}">
 <link rel="canonical" href="{{ site.url }}/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
