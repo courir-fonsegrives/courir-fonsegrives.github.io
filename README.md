@@ -53,6 +53,7 @@ Si le haut d'un fichier contient une erreur, le site n'est pas mis à jour et la
 
 - `index.html` : la mise en page, les couleurs et le code de la page. Il assemble les rubriques, dans l'ordre de la page.
 - `_config.yml` : les réglages de Jekyll, qui fabrique le site.
+- `robots.txt` et `sitemap.xml` : ils disent aux moteurs de recherche quoi lire et où trouver la page. Ne pas les supprimer.
 - `.github/workflows/` : les deux publications automatiques, celle du site et celle des aperçus de PR.
 - `photos/` : les photos servies avec le site : dans `photos/bureau/` celles des membres du bureau, dans `photos/membres/` celles du trombinoscope.
 - Les autres images et le PDF sont chargés depuis [courir-fonsegrives.fr](https://courir-fonsegrives.fr).
