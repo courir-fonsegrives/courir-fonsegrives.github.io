@@ -2,7 +2,7 @@
 
 Site de Courir Fonsegrives, club de course à pied de Quint-Fonsegrives.
 
-En ligne : https://courir-fonsegrives.github.io/
+En ligne : https://courir-fonsegrives.fr/
 
 ## Le dépôt
 
@@ -17,11 +17,14 @@ photos/
 ├── apercu-liens.jpg l'image de l'aperçu des liens partagés (1200 × 630 pixels, tirée du logo)
 └── logo.png         le logo carré que les moteurs de recherche affichent
 documents/           le bulletin d'adhésion (PDF)
+anciennes-adresses/  les adresses de l'ancien site, qui renvoient vers ce site (voir ci-dessous)
+images/              le bulletin d'adhésion à son ancienne adresse (voir ci-dessous)
 index.html           la mise en page, les couleurs et le code ; assemble les rubriques dans l'ordre de la page
 _includes/           deux morceaux de code repris par index.html (icônes des réseaux, texte pour le JSON)
 _config.yml          les réglages de Jekyll, qui fabrique le site
 robots.txt           pour les moteurs de recherche, avec sitemap.xml : ne pas les supprimer
 sitemap.xml
+CNAME                le nom de domaine du site ; ne pas le supprimer
 .github/workflows/   la publication du site et les aperçus de PR
 ```
 
@@ -76,6 +79,26 @@ Certaines lignes sont facultatives :
 | `photo:` dans `bureau.md` | Le membre sans photo |
 | `strava:` dans `bureau.md` | Pas de lien Strava |
 | `site:` dans `partenaires.md` | Le partenaire sans lien |
+
+## Les anciennes adresses
+
+Ce site remplace l'ancien site Joomla de courir-fonsegrives.fr. Des liens et des moteurs de recherche pointent encore vers ses pages, comme `/index.php/adhesion`. Chaque fichier de `anciennes-adresses/` renvoie une de ces adresses vers la bonne rubrique.
+
+Pour en ajouter une, créer dans `anciennes-adresses/` un fichier nommé d'après l'ancienne page (`adhesion.html`), avec seulement ces lignes :
+
+```yaml
+---
+permalink: /index.php/adhesion
+redirect_to: /#adhesion
+---
+```
+
+- `permalink` est l'ancienne adresse, sans `.html` à la fin.
+- `redirect_to` est la rubrique visée, `/#` suivi de l'`id` de la rubrique dans `index.html`.
+
+Un renvoi ne marche pas pour un PDF. L'ancien lien du bulletin d'adhésion reste donc valable grâce à une copie du PDF dans `images/`, sous son ancien nom.
+
+`CNAME` donne le nom de domaine du site à GitHub Pages. Ne pas le supprimer ni le changer.
 
 ## Publier
 
