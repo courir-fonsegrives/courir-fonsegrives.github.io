@@ -59,7 +59,7 @@ Un fichier a deux parties :
 - Ajouter un membre : copier un bloc qui commence par `- prenom:`, le coller dans l'ordre alphabétique des prénoms, puis changer ses valeurs.
 - Retirer un membre : supprimer son bloc, puis sa photo.
 - Corriger un nom : changer `prenom:` ou `initiale:` dans son bloc.
-- Ajouter une photo : la déposer sous le nom `prenom-initiale.jpg` (par exemple `melanie-a.jpg`), puis mettre son chemin après `photo:`.
+- Ajouter une photo : la nommer avec le prénom, puis la première et la dernière lettre du nom, sans accent (David Le Bouquin donne `david-ln.jpg`). Deux membres ont ainsi peu de chances d'avoir le même nom de fichier. La déposer, puis mettre son chemin après `photo:`.
 - Changer une photo : déposer la nouvelle sous le même nom que l'ancienne, elle la remplace.
 - La page recadre la photo en carré, centrée un peu au-dessus du milieu. Réduire une photo de téléphone à environ 400 pixels de large avant de la déposer garde la page rapide.
 
