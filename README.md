@@ -35,6 +35,8 @@ Un fichier a deux parties :
 
 Changer la photo d'un membre du bureau : déposer la photo dans `photos/bureau/` (bouton « Add file », puis « Upload files »), puis mettre son chemin après `photo:` dans `bureau.md`. Sans ligne `photo:`, le membre s'affiche sans photo.
 
+Changer la page Strava du club : mettre son adresse après `strava:` dans `bureau.md`. Sans ligne `strava:`, la page n'affiche pas le lien Strava.
+
 Ajouter un membre au trombinoscope : copier un bloc qui commence par `- prenom:` dans `membres.md`, le coller à sa place dans l'ordre alphabétique des noms, et changer ses valeurs. Déposer sa photo dans `photos/membres/` (bouton « Add file », puis « Upload files »), puis mettre son chemin après `photo:`. Sans ligne `photo:`, le membre s'affiche avec ses initiales et n'est pas dans le jeu « Qui est-ce ? ».
 
 Retirer un membre du trombinoscope : supprimer son bloc dans `membres.md`, puis sa photo dans `photos/membres/`.

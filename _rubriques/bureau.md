@@ -20,4 +20,3 @@ membres:
     photo: "photos/bureau/fanny-yessad.png"
     role: "Secrétaire"
 ---
-Le club est aussi sur [Strava](https://www.strava.com/clubs/courir-fonsegrives).
