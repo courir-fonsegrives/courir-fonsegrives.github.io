@@ -388,7 +388,7 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
   </div>
 </div></section>
 </main>
-<footer><span>© 2026 Courir Fonsegrives, association adhérente de l'USQF</span><span>Quint-Fonsegrives, Haute-Garonne</span><a href="#mentions">Mentions légales</a></footer>
+<footer><span>© {{ site.time | date: "%Y" }} Courir Fonsegrives, association adhérente de l'USQF</span><span>Quint-Fonsegrives, Haute-Garonne</span><a href="#mentions">Mentions légales</a></footer>
 <script>
 new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.scrollPaddingTop=t.offsetHeight+parseFloat(getComputedStyle(t).top)+"px";}).observe(document.querySelector(".top"));
 (function(){
