@@ -7,8 +7,8 @@ editeur:
   rna: "W313001782"
   email: "courirfonsegrives31@gmail.com"
 directeur_publication:
-  nom: "À COMPLÉTER"
-  qualite: "À COMPLÉTER"
+  nom: "Ludivine Querbes"
+  qualite: "Présidente de Courir Fonsegrives"
 hebergeur:
   nom: "GitHub, Inc."
   adresse: "88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis"
