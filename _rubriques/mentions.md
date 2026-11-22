@@ -3,7 +3,10 @@ titre: "Mentions légales"
 editeur:
   nom: "Courir Fonsegrives"
   statut: "Association loi 1901"
-  siege: "La Marne, rue des Coteaux, 31130 Quint-Fonsegrives"
+  siege:
+    adresse: "La Marne, rue des Coteaux"
+    code_postal: "31130"
+    ville: "Quint-Fonsegrives"
   rna: "W313001782"
   email: "courirfonsegrives31@gmail.com"
 directeur_publication:

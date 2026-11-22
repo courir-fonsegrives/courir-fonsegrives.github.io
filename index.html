@@ -15,12 +15,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ accueil.titre_onglet }}</title>
-<meta name="description" content="{{ accueil.description_moteurs }}">
+<title>{{ accueil.titre_onglet | escape }}</title>
+<meta name="description" content="{{ accueil.description_moteurs | escape }}">
 <link rel="canonical" href="{{ site.url }}/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:site_name" content="Courir Fonsegrives">
+<meta property="og:site_name" content="{{ mentions.editeur.nom | escape }}">
 <meta property="og:url" content="{{ site.url }}/">
 <meta property="og:title" content="{{ accueil.titre_onglet | escape }}">
 <meta property="og:description" content="{{ accueil.description_moteurs | escape }}">
@@ -29,6 +29,34 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+{%- assign accueil_url = site.url | append: "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": {% include json.html valeur=mentions.editeur.nom %},
+      "url": {% include json.html valeur=accueil_url %}
+    },
+    {
+      "@type": "SportsOrganization",
+      "name": {% include json.html valeur=mentions.editeur.nom %},
+      "url": {% include json.html valeur=accueil_url %},
+      "description": {% include json.html valeur=accueil.description_moteurs %},
+      "image": {% include json.html valeur=accueil.photo %},
+      "email": {% include json.html valeur=bureau.email %},
+      "sport": "Course à pied",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": {% include json.html valeur=mentions.editeur.siege.ville %},
+        "postalCode": {% include json.html valeur=mentions.editeur.siege.code_postal %},
+        "addressCountry": "FR"
+      }
+    }
+  ]
+}
+</script>
 <meta name="theme-color" content="#0079ba">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230079ba'/%3E%3Cellipse cx='16' cy='17' rx='13' ry='8' fill='none' stroke='%23fff' stroke-width='1.5' transform='rotate(-8 16 17)'/%3E%3Cpath d='M16 11v13' stroke='%23ffd400' stroke-width='3.2' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='5.5' r='2' fill='%23ffd400'/%3E%3C/svg%3E">
 <style>
@@ -342,7 +370,7 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
   <div class="txt">
     {%- assign e = mentions.editeur %}
     <h3>Éditeur</h3>
-    <p>{{ e.nom }}, {{ e.statut }}<br>Siège : {{ e.siege }}<br>RNA : {{ e.rna }}<br><a href="mailto:{{ e.email }}">{{ e.email }}</a></p>
+    <p>{{ e.nom }}, {{ e.statut }}<br>Siège : {{ e.siege.adresse }}, {{ e.siege.code_postal }} {{ e.siege.ville }}<br>RNA : {{ e.rna }}<br><a href="mailto:{{ e.email }}">{{ e.email }}</a></p>
     <h3>Directeur de la publication</h3>
     <p>{{ mentions.directeur_publication.nom }}, {{ mentions.directeur_publication.qualite }}</p>
     {%- assign h = mentions.hebergeur %}
@@ -357,7 +385,7 @@ footer{padding:1.25rem max(var(--m),calc(50% - 36rem)) 2.25rem;font-size:.9rem;d
 <script>
 new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.scrollPaddingTop=t.offsetHeight+parseFloat(getComputedStyle(t).top)+"px";}).observe(document.querySelector(".top"));
 (function(){
-  var R={{ lieux.parcours | jsonify }},ordre={{ lieux.lieux | jsonify }};
+  var R={% include json.html valeur=lieux.parcours %},ordre={% include json.html valeur=lieux.lieux %};
   R.forEach(function(r){r.passe_par.forEach(function(l){if(ordre.indexOf(l)<0)ordre.push(l);});});
   var P=ordre.map(function(l){return [l,R.filter(function(r){return r.passe_par.indexOf(l)>=0;})];});
   var wall=document.getElementById("wall"),list=document.getElementById("list"),place=document.getElementById("place"),count=document.getElementById("count"),btns=[];
@@ -379,8 +407,8 @@ new ResizeObserver(function(e){var t=e[0].target;document.documentElement.style.
 })();
 (function(){
   var sec=document.getElementById("membres"),ul=document.getElementById("polas"),score=document.getElementById("score");
-  var cache={{ membres.jeu_cache | jsonify }},lis=[].slice.call(ul.children),cartes=[].slice.call(ul.querySelectorAll("li:not(.sans) .pola"));
-  var bouton=document.createElement("button");bouton.type="button";bouton.className="jouer";bouton.textContent={{ membres.jeu | jsonify }};
+  var cache={% include json.html valeur=membres.jeu_cache %},lis=[].slice.call(ul.children),cartes=[].slice.call(ul.querySelectorAll("li:not(.sans) .pola"));
+  var bouton=document.createElement("button");bouton.type="button";bouton.className="jouer";bouton.textContent={% include json.html valeur=membres.jeu %};
   function compter(){score.textContent=ul.querySelectorAll('[aria-pressed="true"]').length+" / "+cartes.length;}
   function melanger(t){
     t=t.slice();

@@ -1,0 +1,7 @@
+{%- comment -%}
+Valeur include.valeur en JSON, pour un bloc <script>.
+Chaque "<" devient < : un texte qui contient </script> ou <!-- ne peut plus fermer le bloc.
+Le JSON n'a pas de "<" hors des chaînes, donc le remplacement garde un JSON valide.
+Le filtre replace lit "\\" comme un seul "\" : il faut l'écrire en double.
+{%- endcomment -%}
+{{ include.valeur | jsonify | replace: "<", "\\u003c" }}
