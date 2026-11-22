@@ -16,7 +16,7 @@ Chaque rubrique du site a son fichier dans [`_rubriques/`](_rubriques) :
 | `semaine.md` | Les trois sorties de la semaine |
 | `balade.md` | La Balade de la Saune |
 | `adhesion.md` | Les tarifs et comment adhérer |
-| `bureau.md` | Les membres du bureau, leurs photos, l'adresse mail du club |
+| `bureau.md` | Les membres du bureau, leurs photos, l'adresse mail et la page Strava du club |
 | `membres.md` | Le trombinoscope : la liste des membres et leurs photos |
 | `partenaires.md` | Les partenaires du club, leur logo et leur site |
 | `mentions.md` | Les mentions légales : éditeur, directeur de la publication, hébergeur, données personnelles |

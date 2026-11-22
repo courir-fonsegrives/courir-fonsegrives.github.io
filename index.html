@@ -48,6 +48,7 @@
       "image": {% include json.html valeur=accueil.photo %},
       "logo": {% include json.html valeur=logo_url %},
       "email": {% include json.html valeur=bureau.email %},
+      "sameAs": [{% include json.html valeur=bureau.strava %}],
       "sport": "Course à pied",
       "address": {
         "@type": "PostalAddress",
