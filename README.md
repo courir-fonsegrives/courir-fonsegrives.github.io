@@ -10,7 +10,7 @@ Chaque rubrique du site a son fichier dans [`_rubriques/`](_rubriques) :
 
 | Fichier | Rubrique |
 |---|---|
-| `accueil.md` | La grande photo, le titre et le bouton du haut ; ces textes et la photo servent aussi à l'aperçu des liens partagés |
+| `accueil.md` | La grande photo, le titre et le bouton du haut ; le titre d'onglet et la description servent aussi à l'aperçu des liens partagés |
 | `presentation.md` | « Course à pied, plaisir et convivialité… » |
 | `lieux.md` | Les lieux et les quatorze parcours |
 | `semaine.md` | Les trois sorties de la semaine |
@@ -54,7 +54,7 @@ Si le haut d'un fichier contient une erreur, le site n'est pas mis à jour et la
 - `index.html` : la mise en page, les couleurs et le code de la page. Il assemble les rubriques, dans l'ordre de la page.
 - `_config.yml` : les réglages de Jekyll, qui fabrique le site.
 - `.github/workflows/` : les deux publications automatiques, celle du site et celle des aperçus de PR.
-- `photos/` : les photos servies avec le site : dans `photos/bureau/` celles des membres du bureau, dans `photos/membres/` celles du trombinoscope.
+- `photos/` : les photos servies avec le site : dans `photos/bureau/` celles des membres du bureau, dans `photos/membres/` celles du trombinoscope, et `apercu-liens.jpg`, l'image de l'aperçu des liens partagés (1200 × 630 pixels, tirée du logo).
 - Les autres images et le PDF sont chargés depuis [courir-fonsegrives.fr](https://courir-fonsegrives.fr).
 
 ## Voir en local
