@@ -30,6 +30,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 {%- assign accueil_url = site.url | append: "/" %}
+{%- assign logo_url = site.url | append: "/photos/logo.png" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,6 +46,7 @@
       "url": {% include json.html valeur=accueil_url %},
       "description": {% include json.html valeur=accueil.description_moteurs %},
       "image": {% include json.html valeur=accueil.photo %},
+      "logo": {% include json.html valeur=logo_url %},
       "email": {% include json.html valeur=bureau.email %},
       "sport": "Course à pied",
       "address": {
